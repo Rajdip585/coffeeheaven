@@ -34,6 +34,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     },
     error: function(xhr, status, error) {
       console.error('Error sending webhook request:', error);
+      alert(error);
       // Display error message to the user
     },
     dataType: "json"
