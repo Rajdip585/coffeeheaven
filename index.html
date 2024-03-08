@@ -234,7 +234,7 @@
         <h3>Contact Us</h3>
         <input type="text" name="name" id="name" required class="box" maxlength="20" placeholder="enter your name">
         <input type="number" name="number" id="number" required class="box" maxlength="20" placeholder="enter your number" min="0" max="9999999999" onkeypress="if(this.value.length == 10) return false">
-        <textarea name="message" class="box" id="message" rows="5" cols="40" placeholder="your message"></textarea>
+        <textarea name="message" class="box" id="message" rows="5" cols="40" placeholder="your message" required></textarea>
         <input type="submit" id="SubmitBtn" value="send message" class="btn">
       </form>
 
@@ -290,50 +290,6 @@
 
 
   <!-- custom js file link -->
-  <!-- <script src="js/script.js"></script> -->
-  <script>
-    let menu = document.querySelector('#menu-btn');
-let navbar = document.querySelector('.header .flex .navbar');
-
-menu.onclick = () => {
-  menu.classList.toggle('fa-times');
-  navbar.classList.toggle('active');
-}
-
-window.onscroll = () => {
-  menu.classList.remove('fa-times');
-  navbar.classList.remove('active');
-}
-
-
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevent default form submission
-  var webhookUrl = "https://api.bots.business/v1/bots/1147792/new-webhook?&command=OnRequest&public_user_token=0c19678ef50f732be57484151c307f00&user_id=20228307"; // Replace with your webhook URL
-
-  let name = document.getElementById("name").value;
-  let number = document.getElementById("number").value;
-  let message = document.getElementById("message").value;
-
-  let requestData = {
-    "name": name, "number": number, "msg": message
-  };
-
-  $.ajax({
-    type: "POST",
-    url: webhookUrl,
-    data: JSON.stringify(requestData),
-    success: function() {
-      alert("Message sent successfully");
-      location.reload(); // Reload the page after successful webhook request
-    },
-    error: function(xhr, status, error) {
-      alert('Error sending webhook request:', error);
-      // Display error message to the user
-    },
-    dataType: "json"
-  });
-});
-  </script>
-
+  <script src="js/script.js"></script>
 </body>
 </html>
