@@ -33,7 +33,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
       location.reload(); // Reload the page after successful webhook request
     },
     error: function(xhr, status, error) {
-      alert('Error sending webhook request:', error);
+      location.reload();
       // Display error message to the user
     },
     dataType: "json"
