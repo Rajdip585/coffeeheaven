@@ -360,6 +360,7 @@ section {
   color: var(--black);
   border: var(--border);
   margin: 1rem 0;
+  resize: none;
 }
 
 .footer .box-container {
