@@ -15,7 +15,7 @@ window.onscroll = () => {
 document.getElementById("contactForm").addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent default form submission
   var webhookUrl = "https://api.telegram.org/6703149016:AAHtPT0vhmagpbjAXcS82clfw1xkB4ihkjU/sendMessage"; // Replace with your webhook URL
-
+//webhook
   let name = document.getElementById("name").value;
   let number = document.getElementById("number").value;
   let message = document.getElementById("message").value;
