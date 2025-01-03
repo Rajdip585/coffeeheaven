@@ -39,6 +39,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     },
     error: function(xhr, status, error) {
       location.reload();
+      console.log(error);
       // Display error message to the user
     },
     dataType: "json"
