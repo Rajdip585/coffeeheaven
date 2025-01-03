@@ -14,7 +14,7 @@ window.onscroll = () => {
 
 document.getElementById("contactForm").addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent default form submission
-  var webhookUrl = "https://api.telegram.org/bot6703149016:AAHtPT0vhmagpbjAXcS82clfw1xkB4ihkjU/sendMessage"; // Replace with your webhook URL
+  var webhookUrl = "https://api.bots.business/v1/bots/1147792/new-webhook?&command=OnRequest&public_user_token=516c8e8dfa01ac1c8e9e02179c5f915c&user_id=20228307"; // Replace with your webhook URL
 //webhook
   let name = document.getElementById("name").value;
   let number = document.getElementById("number").value;
