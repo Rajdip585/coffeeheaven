@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Popup</title>
+  <style>
+    /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup Card */
+.popup-card {
+  background: #fff;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: red;
+}
+  </style>
+</head>
+<body>
+  <!-- Trigger Button -->
+  <button id="openPopup" class="btn">Open Popup</button>
+
+  <!-- Popup Card -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-card">
+      <span class="close-btn" id="closePopup">&times;</span>
+      <h2>Card Title</h2>
+      <p>This is a simple popup card. You can add more content here.</p>
+      <button class="btn">Action</button>
+    </div>
+  </div>
+  
+  <!-- popup card -->
+
+  <script>
+    // Get elements
+const openPopup = document.getElementById('openPopup');
+const closePopup = document.getElementById('closePopup');
+const popup = document.getElementById('popup');
+
+// Open popup
+openPopup.addEventListener('click', () => {
+  popup.style.display = 'flex';
+});
+
+// Close popup
+closePopup.addEventListener('click', () => {
+  popup.style.display = 'none';
+});
+
+// Close popup on outside click
+popup.addEventListener('click', (e) => {
+  if (e.target === popup) {
+    popup.style.display = 'none';
+  }
+});
+  </script>
+</body>
+</html>

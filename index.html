@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,14 @@
 
   <!-- font awesome cdn link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
+
   <!-- custom css file link -->
   <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
 
   <!-- header section starts   -->
@@ -27,7 +29,7 @@
       <nav class="navbar">
         <a href="#home">home</a>
         <a href="#about">about</a>
-        <a href="#menu">menu</a>
+        <a href="menu.html">menu</a>
         <a href="#gallery">gallery</a>
         <a href="#team">team</a>
         <a href="#contact">contact</a>
@@ -47,10 +49,10 @@
 
       <div class="content">
         <h3>Coffee heaven</h3>
-        <p>Coffee Heaven is a haven for coffee enthusiasts and caffeine aficionados alike. 
-          This cozy, aromatic oasis beckons with the promise of rich, 
+        <p>Coffee Heaven is a haven for coffee enthusiasts and caffeine aficionados alike.
+          This cozy, aromatic oasis beckons with the promise of rich,
           freshly brewed coffee that awakens the senses and warms the soul.
-           From the moment you step inside.</p>
+          From the moment you step inside.</p>
         <a href="#about" class="btn">about us</a>
       </div>
 
@@ -69,8 +71,8 @@
     <div class="content">
       <h3>A cup of coffee can complete your day</h3>
       <p>A cup of coffee has the remarkable ability to complete your day in the most satisfying way.
-        Its aroma alone can awaken your senses, and that first sip delivers a burst of warmth and 
-        comfort that's unmatched. Whether it's the morning ritual that kickstarts your day or the 
+        Its aroma alone can awaken your senses, and that first sip delivers a burst of warmth and
+        comfort that's unmatched. Whether it's the morning ritual that kickstarts your day or the
         afternoon pick-me-up that fuels your productivity,
         coffee is a trusted companion.</p>
       <a href="#menu" class="btn">our menu</a>
@@ -92,7 +94,7 @@
       <div class="box">
         <img src="images/icon-1.png" alt="">
         <h3>varieties of coffees</h3>
-        <p>There are numerous varieties of coffee available around the world, 
+        <p>There are numerous varieties of coffee available around the world,
           each with its unique flavor profiles,
           growing conditions, and processing methods.</p>
       </div>
@@ -100,23 +102,23 @@
       <div class="box">
         <img src="images/icon-2.png" alt="">
         <h3>Coffee beans</h3>
-        <p>Coffee beans are the seeds of the Coffea plant, and they are used to make 
+        <p>Coffee beans are the seeds of the Coffea plant, and they are used to make
           the beverage we know as coffee.</p>
       </div>
 
       <div class="box">
         <img src="images/icon-3.png" alt="">
         <h3>breakfast and sweets</h3>
-        <p>Breakfast and sweets are two distinct categories of food, 
+        <p>Breakfast and sweets are two distinct categories of food,
           each with its own array of dishes and treats. </p>
       </div>
 
       <div class="box">
         <img src="images/icon-4.png" alt="">
         <h3>read to go coffee</h3>
-        <p>It seems like you're interested in "ready-to-go" coffee options. Ready-to-go coffee 
+        <p>It seems like you're interested in "ready-to-go" coffee options. Ready-to-go coffee
           typically refers to coffee that is pre-made or pre-packaged,
-           allowing for convenient and quick consumption.</p>
+          allowing for convenient and quick consumption.</p>
       </div>
 
     </div>
@@ -232,15 +234,20 @@
 
       <form id="contactForm">
         <h3>Contact Us</h3>
+        
         <input type="text" name="name" id="name" required class="box" maxlength="20" placeholder="enter your name">
+        
         <input type="number" name="number" id="number" required class="box" maxlength="20" placeholder="enter your number" min="0" max="9999999999" onkeypress="if(this.value.length == 10) return false">
-        <textarea name="message" class="box" id="message" rows="5" cols="40" oninput=" placeholder="your message" required></textarea>
+        
+        <textarea name="message" class="box" id="message" rows="5" cols="40" placeholder="your message" required>
+        </textarea>
+        
         <div class="btn-container">
-            <input type="submit" id="SubmitBtn" value="send message" class="btn">
-            <div class="spinner-border loader" id="loader" role="status"></div>
+          <input type="submit" id="SubmitBtn" value="send message" class="btn">
+          <div class="spinner-border loader" id="loader" role="status"></div>
         </div>
-    </form>
-    
+      </form>
+
     </div>
 
   </section>
@@ -255,14 +262,14 @@
         <i class="fas fa-envelope"></i>
         <h3>Our email</h3>
         <p>sandipstudents@gmail.com</p>
-       
+
       </div>
 
-      <div class="box">
+      <!-- <div class="box">
         <i class="fas fa-clock"></i>
         <h3>Opening hours</h3>
         <p>07:00am to 10:00pm</p>
-      </div>
+      </div> -->
 
       <div class="box">
         <i class="fas fa-map-marker-alt"></i>
@@ -274,7 +281,7 @@
         <i class="fas fa-phone"></i>
         <h3>Contact number</h3>
         <p>+918275648835</p>
-        
+
       </div>
 
     </div>
@@ -295,4 +302,5 @@
   <!-- custom js file link -->
   <script src="js/script.js"></script>
 </body>
+
 </html>
