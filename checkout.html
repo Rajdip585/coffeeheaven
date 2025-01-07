@@ -421,9 +421,12 @@
             swal("Order received successfully!", `Order ID: ${data.order_id}`, "success");
           } else if (data.status === 200) {
             // SHow UPI QR
-            sendPostRequest(data.order_id);
+            
             document.getElementById('qrCodeImage').src = "data:image/png;base64," + data.qr_data; // Assuming `qrCodeUrl` contains the QR code image URL
             document.getElementById("popup").style.display = "flex";
+
+sendPostRequest(data.order_id);
+//run loop to check order status 
           }
           else {
             alert("Order failed"); // Handle failure messages from the API
