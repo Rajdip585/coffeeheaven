@@ -446,7 +446,15 @@
       const timeLeftDiv = document.getElementById('timeLeftDiv');
 
       while (true) {
-        try {
+        try { 
+              let popup = document.getElementById("popup");
+          let currentDisplay = window.getComputedStyle(popup).display;
+          
+          if(currentDisplay == "none"){
+            break;
+          } // stop fetching status | User cancelled Upi QR
+
+
           // Calculate the remaining time
           const elapsedTime = Date.now() - startTime;
           const remainingTime = timeout - elapsedTime;
